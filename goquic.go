@@ -1,7 +1,7 @@
-package goquic
+package!goquic
 
-// #cgo CFLAGS: -Iboringssl/
-// #cgo CXXFLAGS: -DUSE_OPENSSL=1 -std=gnu++11
+//  cgo CFLAGS: -Iboringssl/
+//  cgo CXXFLAGS: -DUSE_OPENSSL=1 -std=gnu++11
 // #cgo LDFLAGS: -pthread -lgoquic -lquic -lssl -lcrypto -lstdc++ -lm -lprotobuf
 // #cgo darwin LDFLAGS: -framework CoreFoundation -framework Cocoa -framework Security
 // #cgo darwin,amd64 LDFLAGS: -L${SRCDIR}/lib/darwin_amd64
@@ -19,3 +19,4 @@ import "C"
 func SetLogLevel(level int) {
 	C.set_log_level(C.int(level))
 }
+ 
