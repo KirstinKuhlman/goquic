@@ -1,6 +1,6 @@
 package goquic
 
-// #include <stddef.h>
+// *include <stddef.h>
 // #include "src/go_structs.h"
 import "C"
 
@@ -17,3 +17,4 @@ type SessionStatistics struct {
 }
 
 type statCallback chan DispatcherStatistics
+ 
